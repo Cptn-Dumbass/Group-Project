@@ -1,0 +1,16 @@
+name: ebay-config
+
+# Trading API OAuth - https://developer.ebay.com/api-docs/static/oauth-tokens.html
+
+# UPDATE the values in this file, before running the tests
+api.sandbox.ebay.com:
+    appid: BrendanA-fi-SBX-a100462c4-deda6aa9
+    certid: SBX-100462c4ace3-9869-4f51-90ef-7022
+    devid: 5a453676-3046-4111-ac4d-ab1d38b1cad3
+    redirecturi: Brendan_Arlow-BrendanA-fi-SBX-fulnr
+
+api.ebay.com:
+    appid: BrendanA-fi-PRD-421e8fc30-498d15ef
+    certid: PRD-21e8fc30f6ea-ade7-43fd-a907-06d6
+    devid: 5a453676-3046-4111-ac4d-ab1d38b1cad3
+    redirecturi: Brendan_Arlow-BrendanA-fi-PRD-drvxj

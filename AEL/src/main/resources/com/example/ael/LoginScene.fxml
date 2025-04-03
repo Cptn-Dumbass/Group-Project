@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ael.Controllers.LoginController">
+   <children>
+      <Button fx:id="ContinueButton" defaultButton="true" layoutX="676.0" layoutY="565.0" mnemonicParsing="false" onAction="#onContinueButtonPress" prefHeight="45.0" prefWidth="264.0" style="-fx-background-color: #108cbb; -fx-background-radius: 3;" text="Login" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font></Button>
+      <TextField fx:id="loginField" alignment="CENTER" layoutX="630.0" layoutY="423.0" prefHeight="46.0" prefWidth="366.0" promptText="Employee ID">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <Label fx:id="Title" layoutX="659.0" layoutY="200.0" text="Sign-In">
+         <font>
+            <Font name="System Italic" size="90.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="HelpHyperlink" layoutX="739.0" layoutY="759.0" onAction="#onHelpButtonPress" text="Having Issues?" textFill="#108cbb">
+         <font>
+            <Font size="19.0" />
+         </font></Hyperlink>
+   </children>
+</AnchorPane>

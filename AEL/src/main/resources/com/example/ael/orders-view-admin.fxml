@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ael.Controllers.Orders.OrdersAdmin">
+    <children>
+        <SplitPane dividerPositions="0.12825860271115747" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane fx:id="Sidebar" prefHeight="398.0" prefWidth="146.0" style="-fx-background-color: #108cbb;">
+                    <children>
+                        <Button layoutX="10.0" layoutY="100.0" mnemonicParsing="false" onAction="#onDashboardButtonClick" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #096485;" text="Dashboard" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="206.0" mnemonicParsing="false" onAction="#onOrdersButtonClick" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #096485;" text="Orders" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="422.0" mnemonicParsing="false" onAction="#onAlertsButtonClick" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #096485;" text="Alerts" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="531.0" mnemonicParsing="false" onAction="#onReportsButtonClick" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #096485;" text="Reports" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="314.0" mnemonicParsing="false" onAction="#onInventoryButtonClick" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #096485;" text="Inventory" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="9.0" layoutY="640.0" mnemonicParsing="false" onAction="#onSettingsButtonClick" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #096485;" text="Settings" textFill="WHITE" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="11.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="4.0" layoutY="895.0" mnemonicParsing="false" onAction="#onExitButtonClick" prefHeight="110.0" prefWidth="300.0" style="-fx-background-color: #096485;" text="Exit" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Text fill="WHITE" layoutX="38.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AEL logo here" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.91015625">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="762.0" prefWidth="1348.0" style="-fx-background-color: white;">
+                    <children>
+                        <Pane prefHeight="70.0" prefWidth="1519.0" style="-fx-background-color: #108cbb;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Text fill="WHITE" layoutX="576.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orders">
+                                    <font>
+                                        <Font name="System Italic" size="36.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </Pane>
+                        <TableView fx:id="orderTable" editable="true" layoutX="14.0" layoutY="144.0" prefHeight="543.0" prefWidth="1312.0" AnchorPane.bottomAnchor="211.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="144.0">
+                            <columns>
+                                <TableColumn fx:id="refColumn" prefWidth="168.33334350585938" style="-fx-background-color: #FFC73C;" text="Reference" />
+                                <TableColumn fx:id="statusColumn" prefWidth="54.0" style="-fx-background-color: #FFC73C;" text="Status" />
+                                <TableColumn fx:id="receivedDateColumn" prefWidth="113.66668701171875" style="-fx-background-color: #FFC73C;" text="RecievedDate" />
+                                <TableColumn fx:id="sourceColumn" prefWidth="70.0" style="-fx-background-color: #FFC73C;" text="Source" />
+                                <TableColumn fx:id="subSourceColumn" prefWidth="111.0" style="-fx-background-color: #FFC73C;" text="Subsource" />
+                                <TableColumn fx:id="externalRefColumn" prefWidth="121.66668701171875" style="-fx-background-color: #FFC73C;" text="ExternalRef" />
+                                <TableColumn fx:id="channelRefColumn" prefWidth="122.33331298828125" style="-fx-background-color: #FFC73C;" text="ChannelRef" />
+                                <TableColumn fx:id="paymentMethodColumn" prefWidth="89.0" style="-fx-background-color: #FFC73C;" text="PayMethod" />
+                                <TableColumn fx:id="purchasePriceColumn" prefWidth="109.333251953125" style="-fx-background-color: #FFC73C;" text="PurchasePrice" />
+                                <TableColumn fx:id="processedDateColumn" prefWidth="118.333251953125" style="-fx-background-color: #FFC73C;" text="ProcessedDate" />
+                                <TableColumn fx:id="postageColumn" prefWidth="79.666748046875" style="-fx-background-color: #FFC73C;" text="Postage" />
+                                <TableColumn fx:id="itemsColumn" prefWidth="76.0" style="-fx-background-color: #FFC73C;" text="Items" />
+                                <TableColumn fx:id="custColumn" prefWidth="73.6666259765625" style="-fx-background-color: #FFC73C;" text="Customer" />
+                            </columns>
+                            <opaqueInsets>
+                                <Insets top="1.0" />
+                            </opaqueInsets>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                        </TableView>
+                        <CheckBox fx:id="packedCheck" layoutX="1169.0" layoutY="107.0" mnemonicParsing="false" onAction="#onPackedCheckChanged" prefHeight="0.0" prefWidth="148.0" text="View 'Packed' only" />
+                        <Button layoutX="14.0" layoutY="842.0" mnemonicParsing="false" onAction="#onAddButtonClick" prefHeight="42.0" prefWidth="148.0" style="-fx-background-color: #ff5e3c;" text="Add" textFill="WHITE" />
+                        <Button fx:id="editButton" disable="true" layoutX="173.0" layoutY="842.0" mnemonicParsing="false" onAction="#onEditButtonClick" prefHeight="42.0" prefWidth="148.0" style="-fx-background-color: #ff5e3c;" text="Edit" textFill="WHITE" />
+                        <Button fx:id="approveButton" disable="true" layoutX="14.0" layoutY="86.0" mnemonicParsing="false" onAction="#onApproveButtonClick" prefHeight="42.0" prefWidth="154.0" style="-fx-background-color: #ff5e3c;" text="Approve" textFill="WHITE" />
+                        <Button layoutX="1195.0" layoutY="705.0" mnemonicParsing="false" onAction="#onTraineeButtonClick" prefHeight="28.0" prefWidth="122.0" style="-fx-background-color: #ff5e3c;" text="Trainee view" textFill="WHITE" />
+                  <Button fx:id="deleteButton" disable="true" layoutX="330.0" layoutY="842.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="42.0" prefWidth="148.0" style="-fx-background-color: #ff5e3c;" text="Delete" textFill="WHITE" />
+                  <Button fx:id="sentButton" disable="true" layoutX="176.0" layoutY="86.0" mnemonicParsing="false" onAction="#onSentButtonClick" prefHeight="42.0" prefWidth="154.0" style="-fx-background-color: #ff5e3c;" text="Mark Sent" textFill="WHITE" />
+                  <Button fx:id="printShippingButton" disable="true" layoutX="551.0" layoutY="842.0" mnemonicParsing="false" onAction="#onPrintShippingButtonClick" prefHeight="42.0" prefWidth="166.0" style="-fx-background-color: #ff5e3c;" text="Open Shipping Label" textFill="WHITE" />
+                    </children></AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

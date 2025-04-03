@@ -1,0 +1,109 @@
+##How to run the project and configuration
+
+Step 1: Make sure you have Java installed. Download the latest version 21 of JavaFx. Download the latest version of scene builder.
+
+Step 2: Clone the repository to your local computer.
+
+Step 2: In Intellij IDE go to files> project structure
+Set the 'SDK' to the file location of the downloaded JavaFX SDK
+
+Step 3: Go to Run> Edit configurations
+Add the application to the window with the plus button
+Put the name of the main class in the 'Main' entry box
+Click 'Modify Options' and press 'Add VM options'
+Copy and paste this command replacing the file path with the path to the JavaFX SDK 'lib' folder
+
+##Description of the pages of the system.
+
+
+Splash page
+The Splash page is used to brand the application and load the application.
+
+Sign In page
+The sign in page is used for security and access control of specific functionalities and data based on user roles.. Allows users to sign into their account.
+Dashboard page
+
+The dashboard page is the central hub of the application and is used to provide a quick overview of in an inventory and orders so users can access to key information quickly.
+
+Inventory page
+is used to keep track of all stock the user has, relevant details about the stock, and monitor stock levels.
+
+Inventory Management page
+
+Orders Page
+The Orders page displays an overview of all orders in an order list in a table. It is used to display a comprehensive list of order details.
+Orders Picked page
+
+Orders Picked page
+This page is used to generate a picked list of orders for users to export and print to picked the items the picked list specifies to complete an order.
+
+Orders Packed page
+The purpose of this page is to generate a packed list for orders for users to export and print to pack the items listed to complete an order.
+
+Orders Review page
+This page lists all orders that are marked as completed to review that they are correct before the order is sent. This page is only for admin users.
+
+Delivery Page
+The delivery page displays delivery information for that day. Users use the search bar or filter option to view delivery history. the purpose of the page is to give an overview of all deliveries recieved over the last 24 hours. The table shows the information we need to store for each delivery.
+
+Delivery History page
+The purpose of this page is to shoe more delivery details and to be able to save and maintain a history of past deliveries up to a user-defined date. The page will showing the dates, times, and outcomes of deliveries.
+
+Delivery Process page
+When a delivery is tagged 'To send' it is currently out for delivery. This page is used for order tracking all current orders.
+
+Delivery Actions page
+When a delivery is tagged as 'To send' it means that the delivery is currenty being sent. This page allows users be able to implement corrective actions and change orders that have alreday been sent. This page is also for managing returns and exchanges.
+ 
+Stores page
+This page is used to connect to the third-party stores the user has. This page allows for configuration and automation of data from the stores.
+
+Profile page
+The profile page allows users to view their profile and configure their user preferences.
+
+Settings page
+The role of this page is for users to configure the settings of the application with great detail. 
+
+Help page
+This page is used to offer a user guide on every page of the application.
+
+Sign Out page
+The sign out page allows users to sign out of the application and exit. 
+
+![Splash page](docs/screenshots/Splash.png)
+
+![Sign In page](docs/screenshots/SignIn.png)
+
+![Sign In authentication page](docs/screenshots/ProofOfLoginAuthentication.png)
+
+![Dashboard page](docs/screenshots/Dashboard.png)
+
+![Inventory page](docs/screenshots/Inventory.png)
+
+![Inventory Managment Page](docs/screenshots/InventoryManagment.png)
+
+![Orders page](docs/screenshots/Orders.png)
+
+![Oredrs Picking page](docs/screenshots/OrdersPicking.png)
+
+![Orders Packing page](docs/screenshots/OrdersPacking.png)
+
+![Orders Review page](docs/screenshots/OrdersReview.png)
+
+![Delivery page](docs/screenshots/Delivery.png)
+
+![Delivery History page](docs/screenshots/DeliveryHistory.png)
+
+![Delivery Process page](docs/screenshots/DeliveryProcess.png)
+
+![Delivery Actions page](docs/screenshots/DeliveryActions.png)
+
+![Stores page](docs/screenshots/Stores.png)
+
+![Settings page](docs/screenshots/Stores.png)
+
+![Help page](docs/screenshots/Help.png)
+
+![Sign Out page](docs/screenshots/SignOut.png)
+
+

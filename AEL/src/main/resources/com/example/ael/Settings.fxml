@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ael.Controllers.SettingsController">
+    <children>
+        <SplitPane dividerPositions="0.12825860271115747" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane fx:id="Sidebar" prefHeight="398.0" prefWidth="146.0" style="-fx-background-color: #108cbb;">
+                    <children>
+                        <Button layoutX="10.0" layoutY="100.0" mnemonicParsing="false" onAction="#onDashboardButtonClick" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #096485;" text="Dashboard" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="206.0" mnemonicParsing="false" onAction="#onOrdersButtonClick" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #096485;" text="Orders" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="422.0" mnemonicParsing="false" onAction="#onAlertsButtonClick" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #096485;" text="Alerts" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="531.0" mnemonicParsing="false" onAction="#onReportsButtonClick" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #096485;" text="Reports" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="314.0" mnemonicParsing="false" onAction="#onInventoryButtonClick" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #096485;" text="Inventory" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="9.0" layoutY="640.0" mnemonicParsing="false" onAction="#onSettingsButtonClick" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #096485;" text="Settings" textFill="WHITE" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="11.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="4.0" layoutY="895.0" mnemonicParsing="false" onAction="#onExitButtonClick" prefHeight="110.0" prefWidth="300.0" style="-fx-background-color: #096485;" text="Exit" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Button>
+                        <Text fill="WHITE" layoutX="38.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AEL logo here" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.91015625">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="653.0" style="-fx-background-color: white;">
+                    <children>
+                        <Pane prefHeight="70.0" prefWidth="1519.0" style="-fx-background-color: #108cbb;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Text fill="WHITE" layoutX="576.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+                                    <font>
+                                        <Font name="System Italic" size="36.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </Pane>
+                  <Button fx:id="EbayAuthoriseButton" layoutX="84.0" layoutY="142.0" mnemonicParsing="false" onAction="#onEbayButtonClick" text="Authorise Ebay Account" />
+                        <TextField fx:id="authorisationBox" layoutX="45.0" layoutY="223.0" prefHeight="25.0" prefWidth="253.0" promptText="Copy/Paste the Authorised URL here" />
+                  <Button layoutX="132.0" layoutY="259.0" mnemonicParsing="false" onAction="#onAuthoriseButtonClick" text="Authorise" />
+                  <Button fx:id="amazonButton" layoutX="481.0" layoutY="284.0" mnemonicParsing="false" onAction="#onAmazonButtonClick" text="Authorise Amazon Account" />
+                  <Label layoutX="468.0" layoutY="147.0" text="Put Amazon Credentials Below" />
+                  <TextField fx:id="amazonBox" layoutX="493.0" layoutY="174.0" promptText="Token" />
+                        <TextField fx:id="accountNameField" layoutX="74.0" layoutY="186.0" prefHeight="25.0" prefWidth="193.0" promptText="Enter Account Name Here" />
+                  <TextField fx:id="clientBox" layoutX="493.0" layoutY="211.0" promptText="Client ID" />
+                  <TextField fx:id="secretBox" layoutX="492.0" layoutY="247.0" promptText="Client Secret" />
+                    </children></AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

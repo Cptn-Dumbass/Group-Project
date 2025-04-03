@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ael.Controllers.Inventory.Product.ProductsRemapSKU">
+   <children>
+      <SplitPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-color: white;">
+               <children>
+                  <Pane prefHeight="70.0" prefWidth="653.0" style="-fx-background-color: #108cbb;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Text fill="WHITE" layoutX="81.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remap Associated SKUs">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Button layoutX="400.0" layoutY="550.0" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="34.0" prefWidth="175.0" style="-fx-background-color: #FFC73C;" text="Save and Exit" AnchorPane.bottomAnchor="14.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="prodIDLabel" layoutX="185.0" layoutY="88.0" text="Current Product ID - PLACEHOLDER" />
+                  <TableView fx:id="table_SKUs" layoutX="126.0" layoutY="123.0" prefHeight="320.0" prefWidth="532.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0">
+                     <columns>
+                        <TableColumn fx:id="SKUColumn" prefWidth="290.0" style="-fx-background-color: #FFC73C;" text="Associated sku" />
+                        <TableColumn fx:id="AmountColumn" prefWidth="82.0" style="-fx-background-color: #FFC73C;" text="Amount" />
+                        <TableColumn fx:id="LocationColumn" minWidth="0.0" prefWidth="159.0" style="-fx-background-color: #FFC73C;" text="Warehouse Location" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="212.0" layoutY="550.0" mnemonicParsing="false" onAction="#onExitButtonClick" prefHeight="34.0" prefWidth="175.0" style="-fx-background-color: #FFC73C;" text="Cancel">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="488.0" layoutY="473.0" mnemonicParsing="false" onAction="#onAddButtonClick" prefHeight="24.0" prefWidth="76.0" style="-fx-background-color: #FFC73C;" text="Add" />
+                  <Button fx:id="removeButton" disable="true" layoutX="488.0" layoutY="510.0" mnemonicParsing="false" onAction="#onRemoveButtonClick" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #FFC73C;" text="Remove" />
+                  <TextField fx:id="text_Location" layoutX="382.0" layoutY="473.0" prefHeight="24.0" prefWidth="102.0" />
+                  <Label layoutX="33.0" layoutY="452.0" text="sku" underline="true">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="385.0" layoutY="452.0" text="Location" underline="true">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="text_SKU" layoutX="33.0" layoutY="472.0" prefHeight="24.0" prefWidth="264.0" />
+                  <TextField fx:id="text_Amount" layoutX="301.0" layoutY="472.0" prefHeight="24.0" prefWidth="76.0" />
+                  <Label layoutX="307.0" layoutY="452.0" text="Amount" underline="true">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

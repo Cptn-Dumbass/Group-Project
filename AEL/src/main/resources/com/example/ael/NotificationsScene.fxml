@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ael.Controllers.NotificationsSceneController">
+   <children>
+      <SplitPane dividerPositions="0.20652173913043478" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <AnchorPane prefHeight="398.0" prefWidth="146.0" style="-fx-background-color: #108cbb;">
+                <children>
+                    <Button fx:id="Dashboard" layoutX="4.0" layoutY="34.0" mnemonicParsing="false" onAction="#onDashboardButtonClick" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #096485;" text="Dashboard" textFill="WHITE" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="Orders" layoutX="4.0" layoutY="111.0" mnemonicParsing="false" onAction="#onOrdersButtonClick" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #096485;" text="Orders" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="Alerts" layoutX="4.0" layoutY="341.0" mnemonicParsing="false" onAction="#onAlertsButtonClick" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #096485;" text="Alerts" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="Notifications" layoutX="4.0" layoutY="418.0" mnemonicParsing="false" onAction="#onNotificationsButtonCLick" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #096485;" text="Notifications" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="Inventory" layoutX="4.0" layoutY="187.0" mnemonicParsing="false" onAction="#onInventoryButtonClick" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #096485;" text="Inventory" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="Restock" layoutX="4.0" layoutY="264.0" mnemonicParsing="false" onAction="#onRestockButtonClick" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #096485;" text="Restocks" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Button>
+                    <Label layoutX="51.0" layoutY="7.0" text="Sideboard" textFill="WHITE" underline="true">
+                        <font>
+                            <Font name="System Bold Italic" size="13.0" />
+                        </font>
+                    </Label>
+                </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="653.0" style="-fx-background-color: white;">
+               <children>
+                  <Pane prefHeight="70.0" prefWidth="653.0" style="-fx-background-color: #108cbb;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Text fill="WHITE" layoutX="231.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                   <MenuButton fx:id="SortByDropDown" layoutX="251.0" layoutY="88.0" mnemonicParsing="false" text="Sort By">
+                       <items>
+                           <MenuItem mnemonicParsing="false" text="Action 1" />
+                           <MenuItem mnemonicParsing="false" text="Action 2" />
+                       </items>
+                   </MenuButton>
+                   <Label fx:id="FilterText" layoutX="21.0" layoutY="98.0" text="Filter" />
+                   <TextField fx:id="FilterField" layoutX="55.0" layoutY="94.0" />
+                  <TableView fx:id="notificationTable" layoutX="19.0" layoutY="141.0" prefHeight="339.0" prefWidth="615.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="141.0">
+                      <columns>
+                          <TableColumn fx:id="descriptionColumn" prefWidth="330.0" style="-fx-background-color: #FFC73C;" text="Description">
+                              <cellValueFactory>
+                                  <PropertyValueFactory property="Subject" />
+                              </cellValueFactory>
+                          </TableColumn>
+                          <TableColumn fx:id="priorityColumn" prefWidth="89.0" style="-fx-background-color: #FFC73C;" text="Priority">
+                              <cellValueFactory>
+                                  <PropertyValueFactory property="Priority" />
+                              </cellValueFactory>
+
+                          </TableColumn>
+                          <TableColumn fx:id="dateTimeColumn" prefWidth="154.0" style="-fx-background-color: #FFC73C;" text="Date/Time Received">
+                              <cellValueFactory>
+                                  <PropertyValueFactory property="Received" />
+                              </cellValueFactory>
+
+                          </TableColumn>
+                      </columns>
+                      <columnResizePolicy>
+                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                      </columnResizePolicy>
+                      <opaqueInsets>
+                          <Insets top="1.0" />
+                      </opaqueInsets>
+                  </TableView>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
